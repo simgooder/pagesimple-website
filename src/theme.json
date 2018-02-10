@@ -1,0 +1,27 @@
+{
+	"name": "Pagesimple Special",
+
+	"description": "A sexy Pagesimple homepage clone.",
+
+	"tags": [
+        "Website", "Landing Page"
+    ],
+   
+    "templates": {
+        "page": {
+            "Home": "index.html"
+        },
+
+        "default_page": "Home"
+    },
+
+    "poster": "poster.jpg",
+
+    "config": {
+	    "editor": {
+            "editable": [ ".wrapper" ],
+            "blocks": [ ".row", ".section", ".container", ".container-sm" ],
+            "inline_blocks": [ ".row", ".section", ".container", ".container-sm", ".media-card" ]
+        }
+    }
+}

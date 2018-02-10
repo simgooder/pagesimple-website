@@ -1,0 +1,22 @@
+// Imagine you could add a single PRIMARY or THEME color, 
+//    and through SASS functions, we could create an appropriate palette for the
+//    - http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+$color-primary:     #6B41F9; 
+$color-primary-500: darken($color-primary, 25%);
+$color-primary-300: lighten($color-primary, 15%);
+$color-primary-100: lighten($color-primary, 30%);
+
+$color-highlight:   #30D3E8; 
+$color-success: $color-highlight;
+$color-danger: red;
+
+$color-light:       #fff;
+$color-black:       #111;
+$color-dark:        mix( $color-primary, $color-black, 45% );
+
+$color-gray-500:        #120036; 
+$color-gray-400:        #45424C; 
+$color-gray-300:        #7D7A85;
+$color-gray-200:        #B6ADC6;
+$color-gray-100:        #f4f3f6;

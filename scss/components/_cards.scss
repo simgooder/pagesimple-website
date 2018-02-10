@@ -1,0 +1,107 @@
+@mixin card-base {
+    position: relative;
+
+    border: 1px solid rgba($color-primary-100, 0.5);
+    background-color: $color-light;
+    border-radius: $radius-sm;
+}
+
+.card {
+    @include card-base;
+}
+
+// Media Card
+// --> Features an image, heading, text, etc
+
+.media-card-wrapper {
+    max-width: $bp-md;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq-md {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    @include mq-sm {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
+.media-card-container {
+    @include mq-sm {
+        width: calc(1600px + 5em);
+
+        padding-bottom: 1em;
+
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.media-card {
+    @include card-base;
+
+    margin-top: 1.5rem;
+
+    @include mq-md {
+        display: flex;
+        flex-flow: row nowrap;
+
+        &:nth-of-type(2n) {
+            .media-card-img {
+                order: 2;
+            }
+        }
+    }
+
+    @include mq-sm {
+        padding-bottom: 1em;
+        margin-left: 0.85em; 
+
+        width: 320px;
+        min-width: 320px;
+
+        &:last-of-type {
+            margin-right: 0.85em;
+        }
+    }
+
+    transition: box-shadow 0.25s ease;
+
+    &:hover {
+        box-shadow: $box-shadow-sm;   
+
+        .media-card-img {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+    .media-card-content {
+        padding-left: 1em;
+        padding-right: 1em;
+
+        @include mq-md {
+            padding-left: 1.85em;
+            padding-right: 1.85em;
+        }
+
+    }
+
+    .media-card-img {
+        @include mq-md {
+            max-width: 30%;
+            
+            filter: grayscale(100%);
+
+            transition: filter 0.3s ease;
+        }
+
+        @include mq-sm {
+            max-height: 40vh;
+            overflow: hidden;
+        }
+}
+
+
